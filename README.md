@@ -1,6 +1,12 @@
 # Book Collection API Tests
 
-Automated API tests for book collection management system. Project covers authentication, user collection operations, and negative scenarios for global catalog access.
+The project focuses on automated API tests for a Book Collection Management System. It covers authentication mechanisms, user collection operations (such as adding and removing books), and negative test scenarios related to unauthorized access to the global catalog.
+
+The system under test is based on the DemoQA Book Store application: [DemoQA Book Store](https://demoqa.com/books)
+
+API documentation and available endpoints can be accessed via Swagger: [Swagger API Documentation](https://bookstore.toolsqa.com/swagger/)
+
+The tests were designed based on the official API specification provided in the Swagger documentation.
 
 ## Tech Stack
 
