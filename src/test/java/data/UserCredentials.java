@@ -2,6 +2,7 @@ package data;
 
 public enum UserCredentials {
 
+    // Dummy credentials
     VALID("walton.goggins", "A9b!X@r2"),
     INVALID_PASSWORD("walton.goggins", "wrongPass"),
     INVALID_USER("wrong.user", "A9b!X@r2"),
