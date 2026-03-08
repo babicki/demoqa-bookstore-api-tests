@@ -1,7 +1,7 @@
-package stepdefinitions;
+package com.example.stepdefinitions;
 
-import api.AuthService;
-import data.UserCredentials;
+import com.example.api.AuthService;
+import com.example.data.UserCredentials;
 import io.cucumber.java.en.*;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -9,12 +9,22 @@ import io.restassured.response.Response;
 
 import static org.junit.Assert.*;
 
+/**
+ * Step definitions for book removal scenarios.
+ * Implements Gherkin steps defined in remove_book.feature file and provides
+ * test logic for user authentication and removing books from personal collection.
+ */
 public class RemoveBookSteps {
 
     private Response response;
     private String token;
     private String userId;
 
+    /**
+     * Given step: Authenticates a user for book removal operations.
+     * Performs login using valid credentials and validates successful authentication
+     * by checking response status code and extracting token and userId.
+     */
     @Given("the user is logged in for removing a book")
     public void the_user_is_logged_in_for_removing_a_book() {
 
@@ -32,6 +42,11 @@ public class RemoveBookSteps {
         assertNotNull(userId);
     }
 
+    /**
+     * When step: Removes a book from the user's personal collection.
+     * Retrieves the user's first book from their collection and sends an authenticated
+     * DELETE request to remove it.
+     */
     @When("the user removes a book from their collection")
     public void the_user_removes_a_book_from_their_collection() {
 
@@ -58,8 +73,13 @@ public class RemoveBookSteps {
                 .delete("/BookStore/v1/Book");
     }
 
+    /**
+     * Then step: Verifies that the book was successfully removed from the user's collection.
+     * Asserts HTTP 204 (No Content) status code which indicates successful deletion.
+     */
     @Then("the book should be removed successfully")
     public void the_book_should_be_removed_successfully() {
         assertEquals(204, response.getStatusCode());
     }
 }
+

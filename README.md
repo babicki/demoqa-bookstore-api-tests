@@ -18,18 +18,34 @@ The tests were designed based on the official API specification provided in the 
 
 ## Project Structure
 ```
-src
-├── main
-│   └── java
-└── test
-├── java
-│   ├── api              # API communication layer
-│   ├── services         # Business logic wrappers
-│   ├── data             # Test data
-│   ├── runners          # Cucumber runner
-│   └── stepdefinitions  # Step definitions
-└── resources
-└── features         # Cucumber feature files
+src/
+├── main/
+│   ├── java/
+│   └── resources/
+└── test/
+    ├── java/
+    │   └── com/example/
+    │       ├── api/ 
+    │       │   ├── AuthService.java
+    │       │   ├── BaseApi.java
+    │       │   └── CommonRequest.java
+    │       ├── data/
+    │       │   └── UserCredentials.java
+    │       ├── services/
+    │       │   └── AuthService.java
+    │       ├── runners/
+    │       │   └── TestRunner.java
+    │       └── stepdefinitions/
+    │           ├── LoginSteps.java
+    │           ├── AddBookSteps.java
+    │           ├── RemoveBookSteps.java
+    │           └── AddBookToCatalogSteps.java
+    └── resources/
+        └── features/
+            ├── login.feature
+            ├── add_book.feature
+            ├── remove_book.feature
+            └── add_book_to_catalog.feature
 ```
 ## Covered Scenarios
 
