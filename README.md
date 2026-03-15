@@ -66,8 +66,15 @@ Run all tests:
 ```bash
 mvn test
 ```
+Run a specific test class:
 
-Run specific runner:
+To run a single test class, use the `-Dtest` flag:
 ```bash
 mvn test -Dtest=TestRunner
 ```
+
+Replace `TestRunner` with the name of the test class you want to run, for example:
+```bash
+mvn test -Dtest=LoginTests
+```
+All test classes are located in `src/test/java`.
