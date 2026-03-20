@@ -1,6 +1,6 @@
 # Book Collection API Tests
 
-The project focuses on automated API tests for a Book Collection Management System. It covers authentication mechanisms, user collection operations (such as adding and removing books), and negative test scenarios related to unauthorized access to the global catalog.
+This project focuses on automated API tests for a Book Collection Management System. It covers authentication mechanisms, user collection operations (such as adding and removing books), and negative test scenarios related to unauthorized access to the global catalog.
 
 The system under test is based on the DemoQA Book Store application: [DemoQA Book Store](https://demoqa.com/books)
 
@@ -10,11 +10,11 @@ The tests were designed based on the official API specification provided in the 
 
 ## Tech Stack
 
-- **Java**
-- **Maven**
-- **Cucumber (BDD)**
-- **REST Assured**
-- **JUnit**
+- **Java** – programming language
+- **Maven** – dependency management and test execution
+- **Cucumber (BDD)** – behavior-driven testing
+- **REST Assured** – API testing framework
+- **JUnit** – testing framework
 
 ## Project Structure
 ```
@@ -60,15 +60,15 @@ src/
 **Negative Case**
 - Attempt to add book to global catalog (request rejected)
 
-## How to Run Tests
+## Running Tests
 
-Run all tests:
+Tests can be executed:
+- **From IDE** (e.g., IntelliJ) – run as JUnit tests
+- **From Maven**:
 ```bash
 mvn test
 ```
-Run a specific test class:
-
-To run a single test class, use the `-Dtest` flag:
+Run a specific test class by using the `-Dtest` flag:
 ```bash
 mvn test -Dtest=TestRunner
 ```
